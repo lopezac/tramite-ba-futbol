@@ -2,9 +2,38 @@
 
 Hola, este script lo cree para ahorrar tiempo, para automatizar un tramite que cuando lo tenia que hacer era bastante tedioso.
 
-Se pregunta al usuario el link de la pagina de las canchas de futbol en el polideportivo deseado [ejemplo](https://buenosaires.gob.ar/desarrolloeconomico/deportes/futbol-en-el-polideportivo-parque-patricios), luego que tamaño de cancha desea, futbol 5 o 7, la hora y dia (debe chequear de antemano las fechas y horarios disponibles), y el email y contraseña de su cuenta miBA.
+El script ahora soporta **52 polideportivos** de Buenos Aires y automatiza la reserva de canchas para múltiples deportes:
 
-Automatizo desde abrir el navegador, con el paquete [Selenium](https://www.selenium.dev/documentation/webdriver/), iniciar sesion, pedir turno, seleccionar horario y fecha, rellenar los datos (nombre, apellido, email y dni), con datos falsos gracias al paquete [Faker](https://github.com/joke2k/faker)
+## Polideportivos Soportados
+
+✅ **52 polideportivos** en total, incluyendo:
+- Parque Patricios, Martin Fierro, Don Pepe (originalmente soportados)
+- Costa Rica, Santojanni, Avellaneda, Colegiales, Dorrego, Onega, Pereyra, Pomar, Sarmiento (anteriormente no soportados)
+- Y 40 polideportivos adicionales cubriendo todos los barrios de Buenos Aires
+
+## Deportes Disponibles
+
+🏆 **Futbol**: 52 polideportivos
+- Canchas de Futbol 5, 7, 9 y 11
+- Diferentes tipos de superficie (asfalto, sintético, etc.)
+
+🏀 **Basquet**: 8 polideportivos
+- Canchas cubiertas y al aire libre
+
+🎾 **Tennis**: 2 polideportivos  
+- Canchas de tennis profesionales
+
+## Funcionalidades
+
+El script pregunta al usuario:
+- El polideportivo deseado (de una lista de 52 opciones)
+- El deporte (futbol, basquet, tennis según disponibilidad)
+- El tamaño de cancha (5, 7, 9, 11 según el polideportivo)
+- El tipo de cancha (cuando hay opciones)
+- La fecha y hora de reserva
+- Los datos de la cuenta miBA (email y contraseña)
+
+Automatiza desde abrir el navegador con [Selenium](https://www.selenium.dev/documentation/webdriver/), iniciar sesión, pedir turno, seleccionar horario y fecha, rellenar los datos (nombre, apellido, email y dni) con datos falsos gracias al paquete [Faker](https://github.com/joke2k/faker).
 
 Si tenes errores abriendo el navegador Firefox, y estas en Ubuntu seguramente tengas instalado el navegador con un snap lo que te recomendario seria desintales el navegador y lo instales sin snap.
 
